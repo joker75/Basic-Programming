@@ -3,8 +3,8 @@ This program calculates the occupancy
 rate for a hotel.
 
 Program made by:	Victor Nguyen
-					vdn140030
-					CS 1336.504
+			vdn140030
+			CS 1336.504
 ************************************/
 #include <iostream>
 #include <iomanip>
