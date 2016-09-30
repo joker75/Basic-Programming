@@ -14,12 +14,12 @@ __________________________
 -denominator: double
 __________________________
 LinearEquation(num1: double, num2: double, num3: double, num4: double, num5: double, num6: double)
-+getA: double
-+getB: double
-+getC: double
-+getD: double
-+getE: double
-+getF: double
++getA(): double
++getB(): double
++getC(): double
++getD(): double
++getE(): double
++getF(): double
 +isSolvable(): boolean
 +getX(): double
 +getY(): double
