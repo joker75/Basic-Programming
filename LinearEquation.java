@@ -25,7 +25,7 @@ public class LinearEquation{
 	public double getF () {	return f; }	
 
 	public boolean isSolvable()		// Store the return value as denominator
-	{					// If false, throw exception:
+	{										// If false, throw exception:
 		denominator = (a*d) -(b*c);	// "The equation has no solution."
 		if (denominator != 0)
 			return true;
@@ -33,12 +33,11 @@ public class LinearEquation{
 			return false;
 	}
 
+	// Returns the value of x
 	public double getX()
-	{
-		return ( (e*d) - (b*f) ) / denominator;
-	}
+	{	return ( (e*d) - (b*f) ) / denominator; }
+	
+	// Returns the value of y
 	public double getY()
-	{
-		return ( (a*f) - (e*c) ) / denominator;
-	}
+	{	return ( (a*f) - (e*c) ) / denominator; }
 }
