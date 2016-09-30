@@ -34,7 +34,7 @@ public class Assignment5_vdn140030
 		// EXCEPTIONS AND END PROGRAM
 		catch (InputMismatchException ex)
 		{
-			System.out.println(ex + " INVALID INPUT!\nProgram exiting.");
+			System.out.println(ex + ": INVALID INPUT!\nProgram exiting.");
 			System.exit(0);
 		}
 		
