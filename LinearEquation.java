@@ -18,29 +18,14 @@ public class LinearEquation{
 	
 	// Gets the value of all variables
 	public double getA () { return a; }
-	public double getB ()
-	{
-		return b;
-	}
-	public double getC ()
-	{
-		return c;
-	}
-	public double getD ()
-	{
-		return d;
-	}
-	public double getE ()
-	{
-		return e;
-	}	
-	public double getF ()
-	{
-		return f;
-	}	
+	public double getB () {	return b; }
+	public double getC () {	return c; }
+	public double getD () {	return d; }
+	public double getE () {	return e; }	
+	public double getF () {	return f; }	
 
 	public boolean isSolvable()		// Store the return value as denominator
-	{								// If false, throw exception:
+	{					// If false, throw exception:
 		denominator = (a*d) -(b*c);	// "The equation has no solution."
 		if (denominator != 0)
 			return true;
