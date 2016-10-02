@@ -1,0 +1,10 @@
+# SYNTAX NOTES
+# x = random.randint (a,b) means a <= x <= b
+# Postfix/prefix increment and decrements do not exist => use x+=1 or x-=1
+# !found does not work => use found == False 
+# The input must be received as an integer, not a string, if you want to evaluate it
+# 	for x in range(0, 10):
+		print ("We're on time",x)
+		
+# Single and double quotes act like single line block comments		
+# Triple quotes can act like block comments
