@@ -1,4 +1,7 @@
 /*************************************
+NOTE: THIS PROGRAM IS DIFFERENT FROM
+THE JAVA PROGRAMS.
+
 This program receives linear equations
 from the user, performs Gauss-Jordan
 elimination, and displays the values
