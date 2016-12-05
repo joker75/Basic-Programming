@@ -11,7 +11,7 @@
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-public class Assignment5_vdn140030
+public class LinEqCalc
 {
     public static void main (String[] args)
     {
