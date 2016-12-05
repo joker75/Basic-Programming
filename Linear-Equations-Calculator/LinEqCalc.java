@@ -1,4 +1,4 @@
-/********************************
+/******************************** 
  * Assignment V: This main method receives
  * input, constructs a Linear Equations
  * object, checks if the equation is
