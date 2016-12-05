@@ -6,7 +6,8 @@
  * Note: a leaf is a node without any children.
  *
  *
- * Test Case: 106 101 100 102 103 104 110 107 108 111
+ * Test Case: 106 101 100 102 103
+ *              104 110 107 108 111
  * Created by:  Victor Nguyen on 11/28/2016.
  *              vdn140030
  *              CS 2336.005
@@ -14,7 +15,7 @@
 import jdk.internal.util.xml.impl.Input;
 
 import java.util.*;
-public class Assignment9_vdn140030 {
+public class Source {
     private static final int MAX = 10;
     public static void main (String [] args){
         // Defines variables
