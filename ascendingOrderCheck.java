@@ -11,7 +11,7 @@
 import java.util.InputMismatchException;
 import java.util.ArrayList;
 
-public class Assignment4_vdn140030
+public class ascendingOrderCheck
 {
     public static void main (String [] args)
     {
