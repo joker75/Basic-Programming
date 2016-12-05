@@ -28,11 +28,26 @@ public class Source {
 
         // Stores data
         // Validates for Input Mismatch Exceptions
-        try{for (int i = 0; i < MAX; i++) {numbers[i] = input.nextInt();}}
+		do{
+			int i = 0;
+			try{
+				for (; i < MAX; i++) {numbers[i] = input.nextInt();}
+                // If the program manages to accept all valid integers,
+                // then the array complete, and valid can now be true
+                // to exit the loop
+                if (i == MAX)
+                    valid = true;
+			}
 
-        // Catches invalid input
-        catch(InputMismatchException e){System.out.println("Error. Invalid input. Program ending: " + e);}
-
+			// Catches invalid input
+			catch(InputMismatchException e){
+			System.out.println("Try again. (Input must be valid integers)\n" + e +
+                    "\nPlease enter 10 new integers.");
+			valid = false;
+			input.nextLine();		// Discard current input
+			}
+		} while(!valid);        // Break from the loop when all input is VALID
+        
         // Creates a BST based on the user input
         BST<Integer> intTree = new BST<>(numbers);
 
