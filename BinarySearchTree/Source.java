@@ -30,23 +30,25 @@ public class Source {
         // Validates for Input Mismatch Exceptions
 		do{
 			int i = 0;
-			try{
+			try
+			{
 				for (; i < MAX; i++) {numbers[i] = input.nextInt();}
-                // If the program manages to accept all valid integers,
-                // then the array complete, and valid can now be true
-                // to exit the loop
-                if (i == MAX)
-                    valid = true;
+				// If the program manages to accept all valid integers,
+				// then the array complete, and valid can now be true
+				// to exit the loop
+				if (i == MAX)
+			    	valid = true;
 			}
 
 			// Catches invalid input
 			catch(InputMismatchException e){
-			System.out.println("Try again. (Input must be valid integers)\n" + e +
-                    "\nPlease enter 10 new integers.");
-			valid = false;
-			input.nextLine();		// Discard current input
+			System.out.println("Try again. (Input must be valid integers)\n" 
+						+ e + "\nPlease enter 10 new integers.");
+			valid = false;		// If this catch block is reached, input is NOT
+						// valid! Therefore, this do-while loop repeats
+			input.nextLine();	// Discard current input
 			}
-		} while(!valid);        // Break from the loop when all input is VALID
+		} while(!valid);       		// Break from the loop when all input is VALID
         
         // Creates a BST based on the user input
         BST<Integer> intTree = new BST<>(numbers);
