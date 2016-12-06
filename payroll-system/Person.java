@@ -1,6 +1,8 @@
 // This Person class will act as the 
 // main class from which all other 
 // classes will inherit from.
+
+// should be an interface. Consider having an abstractPerson class
 public class Person {
 	// Defines private variables
 	private String id;					// Employee ID: anything really...
