@@ -4,9 +4,9 @@
  * store it into an array, and check if it's
  * in an ascending order.
  * Created by:	Victor Nguyen on 9/22/2016.
- * 					vdn140030
- *					CS 2336.005
- *					Fall 2016
+ * 				vdn140030
+ *				CS 2336.005
+ *				Fall 2016
  *******************************************/
 import java.util.InputMismatchException;
 import java.util.ArrayList;
