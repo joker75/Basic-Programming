@@ -1,4 +1,4 @@
-class Employee implements Person{
+class Employee extends abstractPerson{
 	// Defines private variables
 	private String id;			// Employee ID: Set of 8 integers
 	private String fullName;		// Full name: anything as well
