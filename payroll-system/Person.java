@@ -2,7 +2,7 @@
 // main class from which all other 
 // classes will inherit from.
 
-// should be an interface. Consider having an abstractPerson class
+// should be an interface. 
 public class Person {
 	// Defines private variables
 	private String id;			// Employee ID: Set of 8 integers
