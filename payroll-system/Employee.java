@@ -1,8 +1,14 @@
-class Employee extends abstractPerson{
-	// Defines private variables
-	private String id;			// Employee ID: Set of 8 integers
-	private String fullName;		// Full name: anything as well
-	protected static int hourlyPay;		// How much pay per hour: validate for positive #'s
-	protected static int workHours;		// How many hours: validate for positive #'s and
-				                // max time (40 hours) overtime (58 hours)
-}
+/***************************************
+ * This Employee class defines the basic
+ * data fields and methods for storing
+ * information. Instances of this class
+ * can be created.
+ *
+ * Created by:  Victor on 12/8/2016.
+ *              vdn140030
+ *              CS 2336.005
+ *              FALL 2016
+ **************************************/
+// All methods and data fields are defined in the
+// abstract class.
+class Employee extends abstractPerson {}
