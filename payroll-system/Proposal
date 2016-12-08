@@ -4,9 +4,11 @@ Victor Nguyen
 This payroll system allows the user to create objects of employees, managers, and
 administrators. All of the employee, manager, and administrator classes inherit from another
 class called Person. Therefore, there will be four total classes.
+
 The Person class is an example of encapsulation since it includes an ID, a birthdate, the hourly
 pay, the work hours, and the total pay. Additionally, there is a method that will return the total
 pay by multiplying the work hours and the hourly pay.
+
 The following classes are an example of inheritance since the employees, managers, and
 administrators need the same data fields and methods from class. Additionally, each class has a
 different perk that the user can input.
