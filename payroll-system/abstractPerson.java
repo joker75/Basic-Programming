@@ -1,5 +1,5 @@
 public abstract abstractPerson implements Person{
-  // SETTER METHODS
+  	// SETTER METHODS
 	public abstract void setID(String input);
 	public abstract void setBirthDate(String input);
 	public abstract void setHourlyPay(int pay);
