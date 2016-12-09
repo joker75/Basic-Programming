@@ -9,14 +9,18 @@
  **************************************/
 public class Manager extends abstractPerson {
     // Defines private data fields
-    private int overtimeHourlyPay;  // How much pay per hour: validate for positive #'s
-    private int overtimeWorkHours;	// How many hours: validate for positive #'s and
-                                    // max time (40 hours) overtime (58 hours)
+    private double overtimeHourlyPay;   // How much pay per hour: validate for positive #'s
+    private double overtimeWorkHours;   // How many hours: validate for positive #'s and
+                                        // max time (40 hours) overtime (58 hours)
     // SETTER METHODS
-    public void setOvertimePay(int pay)     {this.overtimeHourlyPay = pay;}
-    public void setOvertimeHours(int hours) {this.overtimeWorkHours = hours;}
+    public void setOvertimePay(double pay)  {this.overtimeHourlyPay = pay;}
+    public void setOvertimeHours(double hours) {this.overtimeWorkHours = hours;}
 
     // GETTER METHODS
-    public int getOvertimePay()     {return this.overtimeHourlyPay;}
-    public int getOvertimeHours()   {return this.overtimeWorkHours;}
+    public double getOvertimePay()  {return this.overtimeHourlyPay;}
+    public double getOvertimeHours(){return this.overtimeWorkHours;}
+
+    // Calculates overtime pay
+    // total pay = hours * rate
+    public double OverTimecalc()    {return this.overtimeHourlyPay * this.overtimeWorkHours;}
 }
