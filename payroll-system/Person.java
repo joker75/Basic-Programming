@@ -13,15 +13,15 @@ public interface Person {
     // SETTER METHODS
     void setID(String input);
     void setFullName(String input);
-    void setHourlyPay(int pay);
-    void setWorkHours(int hours);
+    void setHourlyPay(double pay);
+    void setWorkHours(double hours);
 
     // GETTER METHODS
     String getID();
     String getFullName();
-    int getHourlyPay();
-    int getWorkHours();
+    double getHourlyPay();
+    double getWorkHours();
 
     // Calculates total pay
-    int calc();
+    double calc();
 }
