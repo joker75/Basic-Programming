@@ -11,25 +11,25 @@
  ************************************/
 public abstract class abstractPerson implements Person{
     // Defines private variables
-    private String id;		// Employee ID: Set of 8 integers
-    private String fullName;// Full name: anything as well
-    private int hourlyPay;  // How much pay per hour: validate for positive #'s
-    private int workHours;	// How many hours: validate for positive #'s and
-                            // max time (40 hours) overtime (58 hours)
+    private String id;		    // Employee ID: Set of 8 integers
+    private String fullName;    // Full name: anything
+    private double hourlyPay;   // How much pay per hour: validate for positive #'s
+    private double workHours;	// How many hours: validate for positive #'s and
+                                // max time (40 hours)
 
     // SETTER METHODS
     public void setID(String input)         {this.id = input;}
     public void setFullName(String input)   {this.fullName = input;}
-    public void setHourlyPay(int pay)       {this.hourlyPay = pay;}
-    public void setWorkHours(int hours)     {this.workHours = hours;}
+    public void setHourlyPay(double pay)    {this.hourlyPay = pay;}
+    public void setWorkHours(double hours)  {this.workHours = hours;}
 
     // GETTER METHODS
     public String getID()           {return this.id;}
     public String getFullName()     {return this.fullName;}
-    public int getHourlyPay()       {return this.hourlyPay;}
-    public int getWorkHours()       {return this.workHours;}
+    public double getHourlyPay()    {return this.hourlyPay;}
+    public double getWorkHours()    {return this.workHours;}
 
     // Calculates total pay
     // total pay = hours * rate
-    public int calc(){return this.hourlyPay * this.workHours;}
+    public double calc(){return this.hourlyPay * this.workHours;}
 }
