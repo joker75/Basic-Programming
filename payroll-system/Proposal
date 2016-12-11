@@ -1,29 +1,38 @@
 # Payroll System
 Victor Nguyen
 
-This payroll system allows the user to create objects of employees, managers, and
-administrators. All of the employee, manager, and administrator classes inherit from another
-class called Person. Therefore, there will be four total classes.
+This payroll system allows the user to input data into a program that organizes employee and manager data.
+The information is then written to a file to be saved. 
+The file, instead of being overwritten, will be appended with a date to be more user friendly.
+The purpose of this project is to allow a manager to save wage information of each employee without overwritting the output file.
+Therefore, the user can continue appending information into the file for future use.
 
-The Person class is an example of encapsulation since it includes an ID, a birthdate, the hourly
-pay, the work hours, and the total pay. Additionally, there is a method that will return the total
-pay by multiplying the work hours and the hourly pay.
+The program will create objects of employees and a manager. 
+Both of the employee and manager classes inherit from an abstract class called abstractPerson, since employees and managers maintain a "is a" relationship with the abstractPerson class.
+This abstract class will also implement the Person interface. 
+Therefore, there will be four total java files.
 
-The following classes are an example of inheritance since the employees, managers, and
-administrators need the same data fields and methods from class. Additionally, each class has a
-different perk that the user can input.
+The abstractPerson class is an example of aggregation since a person has an ID, a birthdate, the hourly
+pay, the work hours, and the total pay, but the actual implementation requires either an employee or manager. 
+In short, the abstractPerson class maintains a proper "has a" relationship. 
+Additionally, this class is abstract because there should not be an instance created from this class.
+The same concept applies for the Person interface. 
+The interface and abstract class are meant to provide the methods and data fields for employees and manager.
+Those classes are meant to be instantiated.
 
-The employees class can keep track of overtime wage and overtime hours. Another
-method will be used to return the overtime pay.
+The abstractPerson class and Manager class are examples of encapsulation since these classes contain data fields and methods that work as a single object.
+In otherwords, the employee and manager objects can access their data fields and methods with the dot operator.
 
-The managers class can keep track of bonuses and individual retirement accounts (IRA).
-
-The administrators class can keep track of stock bonuses. There will be a HashMap that
-can store the company name as the key and the profit as the value.
+The following classes are an example of inheritance since the employees and managers
+need the same data fields and methods from the abstract class. Only the manager class has overtime pay option.
 
 This payroll system will have exception handling. In other words, it will check for invalid input
 and input mismatch by utilizing try/catch blocks. Additionally, there will be while loops and do-
 while loops to allow the user to fix their input.
+
 In regards to file operations, the user has the choice to save the data he or she inputted into
 the system by writing out to a file. The output file will contain all of the objects that the user
 has created. A static object counter will keep track of the number of objects created as well.
+
+Additionally, this program includes generic types to help debug the source code. 
+Namely, a generic array list is used to hold all three employee objects. This generic type is used for input and output.
