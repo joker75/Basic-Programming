@@ -63,9 +63,10 @@ public class Project1_vdn140030 {
 			/*DEBUG HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 			// This nested for loop changes every composite number up
 			// to N as false
-			for (int i = 2; i < N; i++)
-				for(int j = 0; i*i + i*j < N;j++)
-					prime_numbers[i*i+i*j] = false;
+			for (int i = 2; i*i <= N; i++)
+				if(prime_numbers[i])
+					for(int j = i; i*j <= N;j++)
+						prime_numbers[i*j] = false;
 			
 			// Display results
 			for (int i = 2; i < N + 1; i++)
