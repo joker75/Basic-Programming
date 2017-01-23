@@ -1,0 +1,82 @@
+/****************************************************
+ * Project 1
+ * This project uses the Sieve of Eratosthenes to
+ * calculate the prime numbers from 2 to N.
+ * Additionally, there are try/catch blocks that will
+ * validate user input.
+ *   
+ * Created by: Victor Nguyen
+ * Class: CE 3345
+ * Section: 003
+ * Semester: Spring 2017
+ * 
+ ***************************************************/
+import java.util.*;
+public class Project1_vdn140030 {
+	public static void main (String [] args){
+		// Defines variables
+		Scanner input = new Scanner(System.in);
+		int N = 0;									// Initialized to 0
+		boolean valid = true;						// Assuming input is valid
+		boolean [] prime_numbers = new boolean[N+1];// Creates a new boolean array to check for prime numbers		
+					
+		// PART I \\
+		// Prompt the user for validated input
+		do{
+			// INPUT VALIDATION
+			try{
+				System.out.print("Enter a number greater than 2: ");
+				N = input.nextInt();
+				if (N < 2)
+					throw new IllegalArgumentException("Your input should be greater than or equal to 2!");
+				else
+					valid = true;
+			}
+			
+			//EXCEPTION HANDLING
+			catch(InputMismatchException ex1){
+				System.out.println("ERROR! " + ex1);
+				valid = false;		// If this catch block is reached, input is NOT
+									// valid! Therefore, this do-while loop repeats
+				input.nextLine();	// Discard current input
+			}
+			catch(IllegalArgumentException ex2){
+				System.out.println("ERROR! " + ex2);
+				valid = false;		// If this catch block is reached, input is NOT
+									// valid! Therefore, this do-while loop repeats
+				input.nextLine();	// Discard current input
+			}
+		}while(!valid);	// If input is NOT valid, repeat this loop.			
+		
+		// PART II \\
+		// Calculate the prime numbers from 2 to N using the Sieve of Eratosthenes
+		
+		// Quick termination
+		if (N == 2)				
+			System.out.println(2);
+		else{
+			// Initializes the entire array to True values
+			// "for each Number in prime_numbers, set them to true"
+			for (boolean Number: prime_numbers)
+				Number = true;
+			
+			/*DEBUG HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+			// This nested for loop changes every composite number up
+			// to N as false
+			for (int i = 2; i < Math.pow(N, 0.5); i++)
+				for(int j = 0; Math.pow(i,2) + i*j < N;j++)
+					prime_numbers[(int) (Math.pow(i,2)+i*j)] = false;
+			
+			// Display results
+			for (int i = 2; i < N + 1; i++)
+				if(prime_numbers[i])
+					System.out.print(i + " ");
+		}
+		
+		
+		
+		// Farewell message
+		System.out.println("\nThank you for using this program. ");
+	}
+	
+}
