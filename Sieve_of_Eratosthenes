@@ -18,7 +18,7 @@ public class Project1_vdn140030 {
 		Scanner input = new Scanner(System.in);
 		int N = 0;									// Initialized to 0
 		boolean valid = true;						// Assuming input is valid
-		boolean [] prime_numbers = new boolean[N+1];// Creates a new boolean array to check for prime numbers		
+				
 					
 		// PART I \\
 		// Prompt the user for validated input
@@ -55,15 +55,19 @@ public class Project1_vdn140030 {
 		if (N == 2)				
 			System.out.println(2);
 		else{
+			boolean [] prime_numbers = new boolean[N+1];	// Creates a new boolean array to check for prime numbers
+			
 			// Initializes the entire array to True values
 			// "for each Number in prime_numbers, set them to true"
-			for (boolean Number: prime_numbers)
-				Number = true;
+			for (int index = 0; index < N; index++)
+				prime_numbers[index] = true;
 			
-			/*DEBUG HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 			// This nested for loop changes every composite number up
 			// to N as false
 			for (int i = 2; i*i <= N; i++)
+				// If the current index is a prime number,
+				// use that number to falsify the composite
+				// numbers
 				if(prime_numbers[i])
 					for(int j = i; i*j <= N;j++)
 						prime_numbers[i*j] = false;
