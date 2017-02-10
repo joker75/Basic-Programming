@@ -34,7 +34,7 @@ public class Project1_vdn140030 {
 			}
 			
 			//EXCEPTION HANDLING
-			catch(InputMismatchException  IllegalArgumentException ex){
+			catch(InputMismatchException | IllegalArgumentException ex){
 				System.out.println("ERROR! Please enter a positive integer. " + ex1);
 				valid = false;		// If this catch block is reached, input is NOT
 									// valid! Therefore, this do-while loop repeats
