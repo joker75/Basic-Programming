@@ -17,7 +17,7 @@
  * Semester:    Spring 2017
  ************************************************/
 import java.util.*;
-public class Project3_vdn140030 {
+public class Source {
 
     // Defines the input variable
     private static Scanner input = new Scanner(System.in);
