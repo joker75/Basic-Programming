@@ -1,3 +1,4 @@
+#Lazy Deletion
 Programmer:	Victor Nguyen
 Class:			CE 3345
 Section:		003
